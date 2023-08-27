@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 13,110,253;
+  --bs-secondary-rgb: 108,117,125;
+  --bs-success-rgb: 25,135,84;
+  --bs-info-rgb: 13,202,240;
+  --bs-warning-rgb: 255,193,7;
+  --bs-danger-rgb: 220,53,69;
+  --bs-light-rgb: 248,249,250;
+  --bs-dark-rgb: 33,37,41;
+  --bs-white-rgb: 255,255,255;
+  --bs-black-rgb: 0,0,0;
+  --bs-body-color-rgb: 33,37,41;
+  --bs-body-bg-rgb: 255,255,255;
+  --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  }
+  
+  
+
+  body{
+      font-family: var(--bs-body-font-family);
+      font-size: var(--bs-body-font-size);
+      font-weight: var(--bs-body-font-weight);
+      line-height: var(--bs-body-line-height);
+      color: #231f20;
+      text-align: var(--bs-body-text-align);
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      line-height: inherit;
+      color: #ffffff;
+  }
+
+  main{
+    width: 100%;
+    height: 100%;
+  }
+
+  .container{
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #343a40;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .searchItem{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    gap: 10px;
+  }
+
+  .searchItem input{
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    outline: none !important ;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    border: 2px solid #adb5bd;
+    border-radius: 10px;
+    transition: 200ms ease-in-out;
+  }
+
+  .searchItem button{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc107;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .searchItem button svg{
+    color: #000000;
+  }
+
+.searchItem input:hover, .searchItem input:focus {
+    border: 2px solid #ffc107;
+}
+
+
+  .card-holder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .film-holder{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+
+  .film-card{
+    background-color: #212529;
+    width: 45%;
+    height: auto;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .film-card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+  }
+
+  .film-card h2{
+    font-size: medium;
+  }
+
+
+  .clicked-film{
+    border: 1px solid #ffc107;
+  }
+
+  .film-card-poster{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #ffc107;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 10px;
+    color: #000000;
+  }
+
+
+  .film-card-poster img{
+    border-radius: 10px;
+  }
+
+  .film-info-data h1{
+    width: 100%;
+    font-size: 1.6em;
+    text-align: left;
+  }
+
+  .film-info-data h2{
+    width: 100%;
+    font-size: 1em;
+    text-align: left;
+    font-weight: 400
+  }
+
+  .add-bold-style{
+    font-weight: 500;
+  }
+
+
+  .film-info-data{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating-card{
+    display: flex;
+    
+  }
+
+
+  .stars{
+    display: flex;
+  }
+
+  .stars-fill{
+    display: flex;
+    gap: 2px;
+    color: #ffc107;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .container{
+      width: 100%;
+      height: 100%;
+    }
+
+    body{
+      background-color:  #343a40;
+  }
+
+
+  .film-card-poster{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    background-color: #ffc107;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 10px;
+    color: #000000;
+  }
+
+  .img-poster{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .film-info-data{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  }
